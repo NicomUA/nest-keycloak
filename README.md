@@ -1,4 +1,4 @@
-# @nicom/nest-keycloak
+# @nicomua/nest-keycloak
 
 Integrate [keycloak](https://www.keycloak.org/) with [Nest](https://nestjs.com/) controllers and manage keycloak with the admin module
 
@@ -7,7 +7,7 @@ Integrate [keycloak](https://www.keycloak.org/) with [Nest](https://nestjs.com/)
 This module provide decorators to intercept keycloak tokens
 
 ```bash
-$ npm i --save @gaucho/nest-keycloak keycloak-connect
+$ npm i --save nest-keycloak keycloak-connect
 ```
 
 ```ts
@@ -32,7 +32,7 @@ app.use(session);
 
 ```ts
 // app.module.ts
-import { KeycloakModule } from '@gaucho/nest-keycloak';
+import { KeycloakModule } from 'nest-keycloak';
 import { session } from './session';
 
 @Module({
@@ -51,7 +51,7 @@ export class AppModule{}
 
 ```ts
 // secure.controller.ts
-import { Authenticated, User, KeycloakUser } from '@gaucho/nest-keycloak';
+import { Authenticated, User, KeycloakUser } from 'nest-keycloak';
 import { Controller, Get, Post, Put, Delete } from '@nestjs/common';
 
 @Controller()
@@ -107,14 +107,14 @@ export class AdminController {
 
 
 ```bash
-$ npm i --save @gaucho/nest-keycloak keycloak-admin
+$ npm i --save nest-keycloak keycloak-admin
 ```
 
 This module provide an interface to work with ['keycloak-admin'](https://www.npmjs.com/package/keycloak-admin)
 
 ```ts
 // app.module.ts
-import { KeycloakAdminModule } from '@gaucho/nest-keycloak/admin';
+import { KeycloakAdminModule } from 'nest-keycloak/admin';
 
 @Module({
   imports: [
@@ -132,7 +132,7 @@ export class AppModule{}
 ```ts
 // users.service.ts
 import { Module, Injectable } from '@nestjs/common';
-import KeycloakAdminService from '@gaucho/nest-keycloak/admin';
+import KeycloakAdminService from 'nest-keycloak/admin';
 import KcAdminClient from '@keycloak/keycloak-admin-client';
 
 @Injectable()
@@ -151,8 +151,8 @@ export class UsersService {
 ## Keyclaok admin adapter
 
 ```ts
-import { KeycloakConfigAdapter } from "@gaucho/nest-keycloak";
-import { KeycloakAdminAdapter } from "@gaucho/nest-keycloak/admin";
+import { KeycloakConfigAdapter } from "nest-keycloak";
+import { KeycloakAdminAdapter } from "nest-keycloak/admin";
 import KcAdminClient from '@keycloak/keycloak-admin-client';
 
 const cadapter = new KeycloakConfigAdapter({
