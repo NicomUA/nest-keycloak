@@ -9,7 +9,7 @@
     "lib": ["es2017"],
     "module": "commonjs",
     "declaration": true,
-    "types": ["node"],
+    "types": ["jest", "node"],
     "target": "es6",
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
