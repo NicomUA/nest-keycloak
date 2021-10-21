@@ -1,8 +1,8 @@
 {
-  "name": "nest-keycloak",
-  "version": "0.0.5",
+  "name": "ib-nest-keycloak",
+  "version": "0.1.0",
   "description": "",
-  "author": "Nikita Matsapura",
+  "author": "Ivan Burychka",
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -13,20 +13,20 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/NicomUA/nest-keycloak.git"
+    "url": "https://github.com/IvanBurychka/nest-keycloak"
   },
   "dependencies": {
     "@keycloak/keycloak-admin-client": "^15.0.2",
-    "@nestjs/common": "^7.6.0",
-    "@nestjs/core": "^7.6.0",
-    "rxjs": "^6.6.0",
-    "@nestjs/testing": "^7",
+    "@nestjs/common": "8.1.1",
+    "@nestjs/core": "^8.1.1",
+    "@nestjs/testing": "^8.1.1",
     "@types/express": "^4.17.13",
     "express": "^4.17.1",
     "keycloak-connect": "^15.0.2",
     "lodash": "^4.17.21",
     "openid-client": "^4.2.0",
-    "reflect-metadata": "^0.1.12"
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^7.4.0"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
